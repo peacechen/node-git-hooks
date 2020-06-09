@@ -5,7 +5,7 @@ Unfortunately hooks are not part of the repository and thus require developers t
 manually set up and/or install them.  There are a number of projects that address
 this, but they are not as automated, deployment-friendly, or cross-platform.
 
-## Node JS to Support Cross-Platform
+## Node JS for Cross-Platform Support
 
 Instead of using shell scripts which are dependent on the OS, this project uses
 Node to abstract filesystem operations.  This allows it to run on Linux, OSX,
@@ -31,6 +31,6 @@ runs before a commit and is often used to perform linting.
 Add the following `postinstall` script to package.json:
 ```
 "scripts": {
-  "postinstall": "node ./node_modules/.bin/node-git-hooks"
+  "postinstall": "node ./node_modules/node-git-hooks/bin/install"
 },
 ```

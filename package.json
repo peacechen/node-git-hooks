@@ -1,5 +1,5 @@
 {
-  "name": "node-git-hook",
+  "name": "node-git-hooks",
   "version": "1.0.0",
   "description": "Automate git hook deployment",
   "main": "install-git-hook.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/peacechen/node-git-hooks.git"
   },
   "bin": {
-    "node-git-hook": "bin/node-git-hook.js"
+    "node-git-hooks": "bin/install.js"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -20,6 +20,7 @@
     "node",
     "git",
     "hook",
+    "hooks",
     "commit",
     "pre-commit",
     "post-commit",
