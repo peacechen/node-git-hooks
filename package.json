@@ -1,0 +1,34 @@
+{
+  "name": "node-git-hook",
+  "version": "1.0.0",
+  "description": "Automate git hook deployment",
+  "main": "install-git-hook.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peacechen/node-git-hooks.git"
+  },
+  "bin": {
+    "node-git-hook": "bin/node-git-hook.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "node",
+    "git",
+    "hook",
+    "commit",
+    "pre-commit",
+    "post-commit",
+    "install"
+  ],
+  "author": "Peace Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peacechen/node-git-hooks/issues"
+  },
+  "homepage": "https://github.com/peacechen/node-git-hooks#readme"
+}
