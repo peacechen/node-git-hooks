@@ -31,6 +31,6 @@ runs before a commit and is often used to perform linting.
 Add the following `postinstall` script to package.json:
 ```
 "scripts": {
-  "postinstall": "./node_modules/.bin/node-git-hooks"
+  "postinstall": "node-git-hooks"
 },
 ```
