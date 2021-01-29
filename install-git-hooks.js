@@ -38,9 +38,7 @@ function copyDir(src, dest) {
 };
 
 function copy(src, dest) {
-  const oldFile = fs.createReadStream(src);
-  const newFile = fs.createWriteStream(dest);
-  oldFile.pipe(newFile);
+  fs.copyFileSync(src, dest);
 };
 
 module.exports = installGitHooks;
