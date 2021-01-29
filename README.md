@@ -19,6 +19,10 @@ hooks inside node_modules, build systems may throw the error
 `Appears to be a git repo or submodule`.  This project will only copy hooks
 if the `.git` folder exists.
 
+## Tutorial
+
+[This article on dev.to](https://dev.to/peacechen/automated-cross-platform-git-hooks-with-npm-1iof) has a detailed explanation and setup walk-through.
+
 ## Installation
 
 > npm install node-git-hooks --save
