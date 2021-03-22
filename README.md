@@ -30,7 +30,8 @@ if the `.git` folder exists.
 ## Usage
 
 Create a `.githooks` folder and place hooks inside named corresponding to what they should be in `.git/hooks`.  For example, the script `pre-commit`
-runs before a commit and is often used to perform linting.
+runs before a commit and is often used to perform linting. Remember to set the executable flag for hook files on \*NIX systems:
+> chmod +x .githooks/*
 
 Add the following `postinstall` script to package.json:
 ```
