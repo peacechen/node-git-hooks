@@ -25,7 +25,7 @@ if the `.git` folder exists.
 
 ## Installation
 
-> npm install node-git-hooks --save
+> npm install node-git-hooks --save-dev
 
 ## Usage
 
@@ -38,4 +38,18 @@ Add the following `postinstall` script to package.json:
 "scripts": {
   "postinstall": "node-git-hooks"
 },
+```
+
+Run `npm install` to initialize the hooks.
+
+## Advanced Usage
+
+If `package.json` is not located at the root of the repo (e.g. a multi-project repo), add the key
+`node-git-hooks` with the `repo-path` as such:
+```
+{
+  "node-git-hooks": {
+    "repo-path": "../"
+  }
+}
 ```
