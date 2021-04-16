@@ -1,6 +1,6 @@
 {
   "name": "node-git-hooks",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Automate git hook deployment",
   "main": "install-git-hook.js",
   "scripts": {
