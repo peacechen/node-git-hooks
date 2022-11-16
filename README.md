@@ -53,3 +53,12 @@ If `package.json` is not located at the root of the repo (e.g. a multi-project r
   }
 }
 ```
+
+It is also possible to set the githooks folder path following the same logic:
+```
+{
+  "node-git-hooks": {
+    "githooks-path": "../"
+  }
+}
+```
