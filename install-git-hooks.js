@@ -13,8 +13,8 @@ function installGitHooks(args) {
     if (package["node-git-hooks"]["repo-path"]) {
       repoPath = package["node-git-hooks"]["repo-path"];
     }
-    if (package["node-git-hooks"]["githook-path"]) {
-      gitHooksPath = package["node-git-hooks"]["githook-path"];
+    if (package["node-git-hooks"]["githooks-path"]) {
+      gitHooksPath = package["node-git-hooks"]["githooks-path"];
     }
   }
 
