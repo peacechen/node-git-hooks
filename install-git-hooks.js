@@ -7,6 +7,7 @@ function installGitHooks(args) {
   const appRoot = regexPath ? regexPath[1] : libPath;
   const package = require(`${appRoot}package.json`);
   let repoPath = "./";
+  let gitHooksFolder = `${repoPath}.githooks`;
 
   if (package["node-git-hooks"] && package["node-git-hooks"]["repo-path"]) {
     repoPath = package["node-git-hooks"]["repo-path"];
@@ -17,14 +18,18 @@ function installGitHooks(args) {
     return 0;
   }
 
-  if (!fs.existsSync("./.githooks")) {
-    console.log("No .githooks folder found. Skipping hooks installation.");
-    return 0;
+  
+  if (!fs.existsSync(gitHooksFolder)) {
+    gitHooksFolder = `${repoPath}.githooks`
+    if (!fs.existsSync(gitHooksFolder)) {
+      console.log("No .githooks folder found. Skipping hooks installation.");
+      return 0;
+    }
   }
 
   console.log("Installing Git hooks...");
   try {
-    copyDir("./.githooks", `${repoPath}.git/hooks`);
+    copyDir(gitHooksFolder, `${repoPath}.git/hooks`);
   } catch (error) {
     console.error("Error copying Git hooks: ", error);
     return 1;
